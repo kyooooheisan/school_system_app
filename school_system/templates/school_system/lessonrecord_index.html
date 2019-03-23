@@ -1,0 +1,35 @@
+
+
+<html>
+ <head>
+   <title>school_system</title>
+ </head>
+
+ <body>
+   <h2><a href="/">school_system</a></h2>
+ <table>
+   <tr>
+     <th>ID</th>
+     <th>受講者</th>
+     <th>ジャンル</th>
+     <th>受講日</th>
+     <th>受講時間</th>
+     <th>受講金額</th>
+   </tr>
+ {% for lessonrecord in lessonrecords %}
+   <tr>
+     <td>{{lessonrecord.id}}</td>
+     <td>{{lessonrecord.name}}</td>
+     <td>{{lessonrecord.genre}}</td>
+     <td>{{lessonrecord.lesson_day}}</td>
+     <td>{{lessonrecord.lesson_time}}</td>
+     <td>{{lessonrecord.price}}</td>
+     <td><a href="{% url 'lessonrecord_edit' lessonrecord.id %}">編集</a></td>
+   </tr>
+ {% endfor %}
+ </table>
+
+ <a href="{% url 'lessonrecord_create' %}">新規追加</a>
+
+ </body>
+</html>

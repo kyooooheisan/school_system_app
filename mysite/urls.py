@@ -22,7 +22,8 @@ urlpatterns = [
     path('',school_system.views.top,name="top"),
     path("index/",school_system.views.index,name="index"),
     path("student_create/",school_system.views.student_create,name="student_create"),
-    #path('student_create/',include('school_system.urls')),
-    #path('students/<int:student_id>/student_edit/',include('school_system.urls')),
     path("students/<int:student_id>/student_edit/",school_system.views.student_edit,name="student_edit"),
+    path("lessonrecord_index/",school_system.views.lessonrecord_index,name="lessonrecord_index"),
+    path("lessonrecord_create/",school_system.views.lessonrecord_create,name="lessonrecord_create"),
+    path("lessonrecords/<int:lessonrecord_id>/lessonrecord_edit/",school_system.views.lessonrecord_edit,name="lessonrecord_edit"),
 ]

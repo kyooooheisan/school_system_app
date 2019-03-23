@@ -1,0 +1,19 @@
+<html>
+ <head>
+   <title>school_system</title>
+ </head>
+
+ <body>
+
+   <div>
+     <h1>登録講座情報変更</h1>
+   </div>
+
+   <form method="post">
+     {% csrf_token %}
+     {{form.as_p}}
+   <input type="submit" value="変更">
+   </form>
+   <a href="/">一覧に戻る</a>
+  </body>
+</html>
