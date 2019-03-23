@@ -20,5 +20,6 @@ import school_system.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('school_system.urls')),
-    path('index/',include('school_system.urls'))
+    path('index/',include('school_system.urls')),
+    path('create_student/',include('school_system.urls')),
 ]
