@@ -19,7 +19,10 @@ import school_system.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('school_system.urls')),
-    path('index/',include('school_system.urls')),
-    path('create_student/',include('school_system.urls')),
+    path('',school_system.views.top,name="top"),
+    path("index/",school_system.views.index,name="index"),
+    path("student_create/",school_system.views.student_create,name="student_create"),
+    #path('student_create/',include('school_system.urls')),
+    #path('students/<int:student_id>/student_edit/',include('school_system.urls')),
+    path("students/<int:student_id>/student_edit/",school_system.views.student_edit,name="student_edit"),
 ]

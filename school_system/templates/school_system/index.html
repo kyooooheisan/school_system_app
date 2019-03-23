@@ -20,12 +20,12 @@
      <td>{{student.name}}</td>
      <td>{{student.gender}}</td>
      <td>{{student.age}}</td>
-     <td><a href="/">編集</a></td>
+     <td><a href="{% url 'student_edit' student.id %}">編集</a></td>
    </tr>
  {% endfor %}
  </table>
 
- <a href="/create_student">新規追加</a>
+ <a href="{% url 'student_create' %}">新規追加</a>
 
  </body>
 </html>

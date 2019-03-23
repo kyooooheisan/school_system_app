@@ -6,3 +6,8 @@ class StudentForm(forms.ModelForm):
     class Meta:
         model= Student
         fields=('name','gender','age')
+
+class StudentEditForm(forms.ModelForm):
+    class Meta:
+        model= Student
+        fields=('name','gender','age')

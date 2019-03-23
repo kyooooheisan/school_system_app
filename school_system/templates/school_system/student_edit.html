@@ -6,13 +6,14 @@
  <body>
 
    <div>
-     <h1>顧客追加</h1>
+     <h1>情報変更</h1>
    </div>
 
-   <form method="post" action="create_student/">
+   <form method="post">
      {% csrf_token %}
      {{form.as_p}}
-   <input type="submit" value="送信">
+   <input type="submit" value="変更">
    </form>
+   <a href="/">一覧に戻る</a>
   </body>
 </html>
