@@ -1,9 +1,10 @@
 from django.db import models
 from django.utils import timezone
+from datetime import datetime,date
 #参照：https://www.freelance-geek.com/w/2019/02/06/django-form-validation/
 from django.core.validators import MaxValueValidator,MinValueValidator
 #from django.core.validators import MaxLengthValidator,MinLengthValidator
-
+import datetime
 # Create your models here.
 #生徒モデル
 class Student(models.Model):

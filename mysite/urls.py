@@ -26,4 +26,5 @@ urlpatterns = [
     path("lessonrecord_index/",school_system.views.lessonrecord_index,name="lessonrecord_index"),
     path("lessonrecord_create/",school_system.views.lessonrecord_create,name="lessonrecord_create"),
     path("lessonrecords/<int:lessonrecord_id>/lessonrecord_edit/",school_system.views.lessonrecord_edit,name="lessonrecord_edit"),
+    path("invoice_list/",school_system.views.invoice_list,name="invoice_list"),
 ]
